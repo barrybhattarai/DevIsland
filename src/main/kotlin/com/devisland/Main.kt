@@ -16,7 +16,7 @@ class DemoApplication{
     @GetMapping("/time")
     fun time():String {
         val now = LocalDateTime.now()
-        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss a")
         return formatter.format(now)
     }
 }
